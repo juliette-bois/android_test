@@ -23,6 +23,12 @@ android {
     }
     testOptions {
         animationsDisabled = true
+        reporting {
+            true
+        }
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 

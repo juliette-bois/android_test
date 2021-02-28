@@ -5,16 +5,21 @@ import com.openclassrooms.magicgithub.model.User
 
 class UserRepository(private val apiService: ApiService) {
 
-    val users: List<User>
+    //("A modifier")
+    val users: MutableList<User>
         get() {
-            TODO("A modifier")
+            return this.apiService.getUsers()
         }
 
+    //("A modifier")
     fun generateRandomUser() {
-        TODO("A modifier")
+        this.apiService.generateRandomUser()
     }
 
+    //("A modifier")
     fun deleteUser(user: User?) {
-        TODO("A modifier")
+        if (user != null) {
+            this.apiService.deleteUser(user)
+        }
     }
 }

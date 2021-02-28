@@ -3,7 +3,8 @@ package com.openclassrooms.magicgithub.api
 import com.openclassrooms.magicgithub.model.User
 import java.util.Random
 
-object FakeApiServiceGenerator {
+object
+FakeApiServiceGenerator {
     fun generateRandomUser(): User {
         return FAKE_USERS_RANDOM.get(Random().nextInt(FAKE_USERS_RANDOM.size))
     }
